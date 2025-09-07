@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Expense Tracker</h1>
+
+        <!-- Budget Input -->
+        <div class="budget-container card">
+            <input type="number" id="budget-input" placeholder="Enter Monthly Budget">
+            <button id="set-budget">Set Budget</button>
+        </div>
+
+        <!-- Expense Form -->
+        <form id="expense-form" class="card">
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- Expenses List -->
+        <div class="expense-list-container card">
+            <h3>Expenses</h3>
+            <ul id="expense-list"></ul>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-container">
+            <div class="summary-card">
+                <h4>Total Expenses</h4>
+                <p>₹<span id="total">0</span></p>
+            </div>
+            <div class="summary-card">
+                <h4>Total Savings</h4>
+                <p>₹<span id="savings">0</span></p>
+            </div>
+            <div class="summary-card">
+                <h4>Usage</h4>
+                <p><span id="usage">0</span>%</p>
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
